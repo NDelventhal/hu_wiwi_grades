@@ -75,7 +75,7 @@ df = hu.get_grading(exam="", only_current_semester = True)
 # Returns a dataframe listing the number of participants, the examiner and all grades as variables. 
 
 df2 = prepare_for_analysis(df) 
-# Prepares the output of the get_grading() function for further analysis, such as visualisations, descriptive statistics or regression analysis.
+# Prepares the dataframe output of the get_grading() function for further analysis, such as visualisations, descriptive statistics or regression analysis.
 ```
 
 ## License
