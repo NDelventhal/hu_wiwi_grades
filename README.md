@@ -14,7 +14,7 @@
 
 Please note: The functionality maybe interrupted in case any changes in the publication occur or in case the website is not available.  
 
-# Background
+## Background
 
 This library was primarily created for testing/training purposes, such as extracting information from PDF files, writing and publishing of code. It nevertheless aims to offer a use-case. Current and historical grading information may be of interest for (prospective) students, examiners or potentially even employers.   
 
