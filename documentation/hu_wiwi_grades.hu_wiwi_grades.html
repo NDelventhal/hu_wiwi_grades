@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.1" />
+<title>hu_wiwi_grades.hu_wiwi_grades API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>hu_wiwi_grades.hu_wiwi_grades</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import pandas as pd
+import numpy as np
+import requests
+import tabula
+from bs4 import BeautifulSoup
+
+def list_sources(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;):  
+ &#34;&#34;&#34;Scrapes url sources that list grading overviews from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin.
+
+ Parameters
+ ----------
+ url : str
+     URL listing the current grading overview of the HU WiWi Faculty. Defaults to &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;.
+
+ Returns
+ -------
+ dict
+     containing the semesters as keys and the corresponding URLs listing grading overview as values. 
+ &#34;&#34;&#34;
+ soup = BeautifulSoup(requests.get(url).content, &#39;lxml&#39;)
+ latest = &#34;&#34;
+ if &#34;semester&#34; in str(soup.find(&#39;h4&#39;)):
+    semester = soup.find(&#39;h4&#39;).getText()
+ elif &#34;semester&#34; in str(soup.find(&#39;h3&#39;)):
+    semester = soup.find(&#39;h3&#39;).getText()
+ else:  
+    semester = &#34;current&#34;
+ urls = {semester: url} 
+ for i in soup.find_all(&#39;p&#39;):
+  if i.find(&#34;a&#34;) != None:
+    a = i.find(&#34;a&#34;)
+    link = a.attrs[&#39;href&#39;]
+    if &#34;resolveuid&#34; in link:
+      link = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/&#34; + link
+    if &#34;mailto&#34; in link:
+      continue
+    if &#34;AGNES&#34; in a.text:
+      continue
+    temp = {a.text: link} 
+    urls.update(temp)
+ return urls
+
+def scrape_overview(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;, exam = &#34;&#34;): 
+ &#34;&#34;&#34;Scrapes the latest grading overview from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and returns the overview or a subset based on the entered exam specification.
+
+ Parameters
+ ----------
+ url : str
+     URL listing the current grading overview of the HU WiWi Faculty.
+     Defaults to &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;.
+     
+ exam : str
+     Exam search filter by name. 
+     Defaults to &#34;&#34; (no search specification).
+ 
+ Returns
+ -------
+ pd.DataFrame 
+      Dataframe containing an exam overview. Data columns are as follows:
+
+        ==================  ==============================================================
+        exam                The exam name (as `str`)
+        date_published      Date of the grading (as `str`)
+        exam_review_details Details listing the review possibilities (as `str`)
+        semester            The corresponding semester of the publication (as `str`)
+        ==================  ==============================================================
+ &#34;&#34;&#34;
+ soup = BeautifulSoup(requests.get(url).content, &#39;lxml&#39;)
+ df = pd.DataFrame(columns = [&#34;exam&#34;, &#34;url&#34;, &#34;date_published&#34;, &#34;exam_review_details&#34;, &#34;semester&#34;])
+ for i in soup.find_all(&#39;tbody&#39;):
+    for y in i.find_all(&#34;tr&#34;):
+     if y.find(&#34;td&#34;) == 0:
+      continue
+     text = y.find_all(&#34;td&#34;)
+     if str(text) == &#34;[]&#34;:
+      continue
+     if &#34;strong&#34; in str(text[0]):
+      continue
+     if text[0].find(&#39;a&#39;) is None:
+       url = &#34;&#34; 
+     else:
+       url = text[0].find(&#39;a&#39;).attrs[&#39;href&#39;]
+       if &#34;resolveuid&#34; in str(url):
+        url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/&#34; + url
+     if &#34;semester&#34; in str(soup.find(&#39;h4&#39;)):
+        semester = soup.find(&#39;h4&#39;).getText()
+     elif &#34;semester&#34; in str(soup.find(&#39;h3&#39;)):
+        semester = soup.find(&#39;h3&#39;).getText()
+     else:  
+        semester = &#34;unidentified&#34;
+     semester = semester.replace(&#34;Sommersemester&#34;, &#34;SoSe&#34;).replace(&#34;Wintersemester&#34;, &#34;WiSe&#34;)
+     df = df.append({&#34;exam&#34;: text[0].getText(), &#34;url&#34;: url,
+                     &#34;date_published&#34;: text[1].getText(),
+                     &#34;exam_review_details&#34;: text[2].getText(),
+                     &#34;semester&#34;: semester}, ignore_index=True)
+    
+ for col in [&#34;exam&#34;, &#34;url&#34;, &#34;date_published&#34;, &#34;exam_review_details&#34;]:
+    df[col] = df[col].str.replace(&#34;\n&#34;, &#34; &#34;)
+ df = df[df[&#34;exam&#34;].apply(lambda x: len(x) &gt; 1)]
+ if exam != &#34;&#34;:
+    df = df[df[&#39;exam&#39;].str.contains(exam)]
+ return df
+
+def scrape_all_overviews(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;, exam = &#34;&#34;): 
+ &#34;&#34;&#34;Scrapes all available grading overviews from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and return the overviews or a subset based on the entered exam specification.
+
+ Parameters
+ ----------
+ url : str
+     URL listing the current grading overview of the HU WiWi Faculty. Defaults to &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;.
+ exam : str
+     Exam search filter by name. Defaults to &#34;&#34; (no search specification).
+ 
+ Returns
+ -------
+ pd.DataFrame 
+      Dataframe containing an exam overview. Data columns are as follows:
+
+        ==================  ==============================================================
+        exam                The exam name (as `str`)
+        date_published      Date of the grading (as `str`)
+        exam_review_details Review details (as `str`)
+        semester            Semester of the publication (as `str`)
+        ==================  ==============================================================
+ &#34;&#34;&#34;
+ urls = list_sources()
+ df = pd.DataFrame(columns = [&#34;exam&#34;, &#34;url&#34;, &#34;date_published&#34;, &#34;exam_review_details&#34;, &#34;semester&#34;])
+ for keys,values in urls.items():
+   df = df.append(scrape_overview(url = values))
+ if exam != &#34;&#34;:
+    df = df[df[&#39;exam&#39;].str.contains(exam)]
+    
+ df = df[df[&#34;exam&#34;].apply(lambda x: len(x) &gt; 1)]
+ df.reset_index(drop=True, inplace=True)
+ return df
+
+def _extract_pdf(url = &#34;url&#34;):
+ &#39;&#39;&#39;Extracts grading details from PDFs&#39;&#39;&#39;
+ grades = [&#39;1.0&#39;, &#39;1.3&#39;, &#39;1.7&#39;, &#39;2.0&#39;, &#39;2.3&#39;, &#39;2.7&#39;, &#39;3.0&#39;, &#39;3.3&#39;, &#39;3.7&#39;, &#39;4.0&#39;, &#39;5.0&#39;]
+ if &#34;hu-berlin.de&#34; not in url:
+    results = None
+ else:
+    temp = pd.DataFrame()
+    try: 
+        temp = tabula.read_pdf(url, pages = 1, multiple_tables = False)
+        temp = temp[0]
+        df_index = list(temp.index.values) 
+        if isinstance(df_index[0], (int, np.integer)) == False:
+            temp = temp.reset_index()     
+        temp.columns = [&#39;examiner&#39;] + temp.columns.tolist()[1:]    
+        temp = temp.dropna(subset=[&#39;examiner&#39;])
+        temp = temp.dropna(axis = 1)
+        temp.reset_index(drop=True, inplace=True)
+        temp[&#34;examiner&#34;][0] = temp[&#34;examiner&#34;][0] + &#34;;&#34;
+        temp[&#34;merged&#34;] = temp.apply(lambda row: &#39; &#39;.join(row.values.astype(str)), axis=1)
+        temp[&#34;merged&#34;] = temp[&#34;merged&#34;].str.replace(&#39; / &#39;,&#39;/&#39;).str.replace(&#39;; &#39;,&#39;;&#39;)
+        results = temp[&#34;merged&#34;][0]
+        if len(temp.columns) &gt; 14:
+            results = None 
+            print(&#34;Could not extract the grades from:&#34;, url)
+        else: 
+            results = results
+    except: 
+            results = None 
+            print(&#34;Could not extract the grades from:&#34;, url)
+    return results
+
+def _pull_grades(df = pd.DataFrame(), url = &#34;url&#34;):
+ &#39;&#39;&#39;Iterates the extraction of grading details from the PDF over the specified column, containing URLs&#39;&#39;&#39;
+ obs = df.shape[0] 
+ urls = df.url.str.count(&#34;www.&#34;).sum()
+ print(&#34;The dataframe contains&#34;, obs, &#34;rows,&#34;, urls,&#34;contain URLs.&#34;)
+ print(&#34;Next, extracting grades from the PDF files.&#34;)
+ df[&#34;grades&#34;] = df.url.apply(lambda x: _extract_pdf(url = x))
+ fail = df.grades.isna().sum() - (df.shape[0] - df.url.str.count(&#34;www.&#34;).sum())
+ if fail &gt; 0:
+  print(fail, &#34;observations could not be processed.&#34;)
+ return df     
+
+def _split_grades(df = pd.DataFrame(), grades = &#34;grades&#34;):
+ &#39;&#39;&#39;Splits the grades based on specified delimiter.&#39;&#39;&#39;
+ df = df.dropna(how=&#39;all&#39;, axis=1)
+ df[&#34;grades&#34;] = df[&#34;grades&#34;].str.strip()
+ df[[&#34;examiner&#34;, &#34;grades&#34;]] = df.grades.str.split(&#39;;&#39;,expand=True)
+ df[[&#34;round&#34;,&#34;examiner&#34;]] = df.examiner.str.split(&#39; &#39;,1,expand=True) 
+ cols = [&#39;participants&#39;, &#39;1.0&#39;, &#39;1.3&#39;, &#39;1.7&#39;, &#39;2.0&#39;, &#39;2.3&#39;, &#39;2.7&#39;, &#39;3.0&#39;, &#39;3.3&#39;, &#39;3.7&#39;, &#39;4.0&#39;, &#39;5.0&#39;]
+ df[cols] = df[grades].str.split(&#39; &#39;,expand=True).replace(&#34;-&#34;, &#34;0&#34;)
+ del df[&#34;grades&#34;]
+ return df
+
+def get_grading(exam=&#34;&#34;, only_current_semester = True):
+ &#34;&#34;&#34;Scrapes the gradings from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and returns an overviews or a subset based on the entered exam specification.
+
+ Parameters
+ ----------
+ exam : str
+     Exam search filter by name. Defaults to &#34;&#34; (no search specification).
+ only_current_semester  : bool
+     Shall only the latest available semester data be scraped? Defaults to True.
+ 
+ Returns
+ -------
+ pd.DataFrame 
+      Dataframe containing an exam overview. Data columns are as follows:
+
+        ==================  =========================================================
+        exam                The exam name (as `str`)
+        date_published      Date of the grading (as `str`)
+        exam_review_details Review details (as `str`)
+        semester            Semester of the publication (as `str`)
+        examiner            Name of the examiner (as `str`)
+        round               Exam round &#39;01&#39;/&#39;02&#39; as prior/after the break (as `str`)
+        participants        Number of participants (as `str`)
+        1.0                 Number of participants with a grading of 1.0 (as `str`)
+        1.3                 Number of participants with a grading of 1.3 (as `str`)
+        1.7                 Number of participants with a grading of 1.7 (as `str`)
+        2.0                 Number of participants with a grading of 2.0 (as `str`)
+        2.3                 Number of participants with a grading of 2.3 (as `str`)
+        2.7                 Number of participants with a grading of 2.7 (as `str`)
+        3.0                 Number of participants with a grading of 3.0 (as `str`)
+        3.3                 Number of participants with a grading of 3.3 (as `str`)
+        3.7                 Number of participants with a grading of 3.7 (as `str`)
+        4.0                 Number of participants with a grading of 4.0 (as `str`)
+        5.0                 Number of participants with a grading of 5.0 (as `str`)
+        ==================  =========================================================
+ &#34;&#34;&#34;
+ if only_current_semester == True:
+    df = scrape_overview(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;, exam = exam)
+ else: 
+    df = scrape_all_overviews(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;, exam = exam) 
+ df = _pull_grades(df = df, url = &#34;url&#34;)
+ df = _split_grades(df = df, grades = &#34;grades&#34;)
+ return df 
+
+def prepare_for_analysis(df = pd.DataFrame()):
+ &#34;&#34;&#34;Prepares the output of the get_grading() function for further analysis, such as visualisations, regressions or
+  descriptive statistics. 
+
+ Parameters
+ ----------
+ df : pd.DataFrame()
+     Requires the DataFrame output of the get_grading() function. 
+ 
+ Returns
+ -------
+ pd.DataFrame 
+      Dataframe containing an exam overview. Data columns are as follows:
+
+        ==================  ========================================================
+        exam                The exam name (as `str`)
+        semester            The corresponding semester of the publication (as `str`)
+        round               Exam round &#39;01&#39;/&#39;02&#39; as prior/after the break (as `str`)
+        examiner            Name of the examiner (as `str`)
+        grade               Grade of a single exam participant (as `int`)
+        ==================  ========================================================
+ &#34;&#34;&#34;   
+ df2 = pd.DataFrame()
+ for index, row in df.iterrows():
+  for grade in [&#39;1.0&#39;, &#39;1.3&#39;, &#39;1.7&#39;, &#39;2.0&#39;, &#39;2.3&#39;, &#39;2.7&#39;, &#39;3.0&#39;, &#39;3.3&#39;, &#39;3.7&#39;, &#39;4.0&#39;, &#39;5.0&#39;]:
+    if row[grade] is not None:
+      for i in range(0, int(float(row[grade]))):
+           exam = row.exam.replace(&#39;- 0&#39;,&#39; - 0&#39;).replace(&#39;-0&#39;,&#39;- 0&#39;).replace(&#34; / &#34;,&#34;/ &#34;)
+           exam_name = exam.split(&#39; - 0&#39;)[0].strip()
+           temp1 = pd.DataFrame({ &#39;exam&#39;: [exam_name],
+                                  &#39;semester&#39;: [row.semester.strip()],
+                                  &#39;round&#39; : [row[&#34;round&#34;]],
+                                  &#39;examiner&#39; : [row.examiner.strip()],
+                                  &#39;grade&#39; : float(grade)})
+           df2 = df2.append(temp1)
+ df2.reset_index(drop=True, inplace=True)
+ return df2</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="hu_wiwi_grades.hu_wiwi_grades.get_grading"><code class="name flex">
+<span>def <span class="ident">get_grading</span></span>(<span>exam='', only_current_semester=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scrapes the gradings from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and returns an overviews or a subset based on the entered exam specification.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>exam</code></strong> :&ensp;<code>str</code></dt>
+<dd>Exam search filter by name. Defaults to "" (no search specification).</dd>
+</dl>
+<p>only_current_semester
+: bool
+Shall only the latest available semester data be scraped? Defaults to True.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pd.DataFrame </code></dt>
+<dd>
+<p>Dataframe containing an exam overview. Data columns are as follows:</p>
+<p>==================
+=========================================================
+exam
+The exam name (as <code>str</code>)
+date_published
+Date of the grading (as <code>str</code>)
+exam_review_details Review details (as <code>str</code>)
+semester
+Semester of the publication (as <code>str</code>)
+examiner
+Name of the examiner (as <code>str</code>)
+round
+Exam round '01'/'02' as prior/after the break (as <code>str</code>)
+participants
+Number of participants (as <code>str</code>)
+1.0
+Number of participants with a grading of 1.0 (as <code>str</code>)
+1.3
+Number of participants with a grading of 1.3 (as <code>str</code>)
+1.7
+Number of participants with a grading of 1.7 (as <code>str</code>)
+2.0
+Number of participants with a grading of 2.0 (as <code>str</code>)
+2.3
+Number of participants with a grading of 2.3 (as <code>str</code>)
+2.7
+Number of participants with a grading of 2.7 (as <code>str</code>)
+3.0
+Number of participants with a grading of 3.0 (as <code>str</code>)
+3.3
+Number of participants with a grading of 3.3 (as <code>str</code>)
+3.7
+Number of participants with a grading of 3.7 (as <code>str</code>)
+4.0
+Number of participants with a grading of 4.0 (as <code>str</code>)
+5.0
+Number of participants with a grading of 5.0 (as <code>str</code>)
+==================
+=========================================================</p>
+</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_grading(exam=&#34;&#34;, only_current_semester = True):
+ &#34;&#34;&#34;Scrapes the gradings from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and returns an overviews or a subset based on the entered exam specification.
+
+ Parameters
+ ----------
+ exam : str
+     Exam search filter by name. Defaults to &#34;&#34; (no search specification).
+ only_current_semester  : bool
+     Shall only the latest available semester data be scraped? Defaults to True.
+ 
+ Returns
+ -------
+ pd.DataFrame 
+      Dataframe containing an exam overview. Data columns are as follows:
+
+        ==================  =========================================================
+        exam                The exam name (as `str`)
+        date_published      Date of the grading (as `str`)
+        exam_review_details Review details (as `str`)
+        semester            Semester of the publication (as `str`)
+        examiner            Name of the examiner (as `str`)
+        round               Exam round &#39;01&#39;/&#39;02&#39; as prior/after the break (as `str`)
+        participants        Number of participants (as `str`)
+        1.0                 Number of participants with a grading of 1.0 (as `str`)
+        1.3                 Number of participants with a grading of 1.3 (as `str`)
+        1.7                 Number of participants with a grading of 1.7 (as `str`)
+        2.0                 Number of participants with a grading of 2.0 (as `str`)
+        2.3                 Number of participants with a grading of 2.3 (as `str`)
+        2.7                 Number of participants with a grading of 2.7 (as `str`)
+        3.0                 Number of participants with a grading of 3.0 (as `str`)
+        3.3                 Number of participants with a grading of 3.3 (as `str`)
+        3.7                 Number of participants with a grading of 3.7 (as `str`)
+        4.0                 Number of participants with a grading of 4.0 (as `str`)
+        5.0                 Number of participants with a grading of 5.0 (as `str`)
+        ==================  =========================================================
+ &#34;&#34;&#34;
+ if only_current_semester == True:
+    df = scrape_overview(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;, exam = exam)
+ else: 
+    df = scrape_all_overviews(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;, exam = exam) 
+ df = _pull_grades(df = df, url = &#34;url&#34;)
+ df = _split_grades(df = df, grades = &#34;grades&#34;)
+ return df </code></pre>
+</details>
+</dd>
+<dt id="hu_wiwi_grades.hu_wiwi_grades.list_sources"><code class="name flex">
+<span>def <span class="ident">list_sources</span></span>(<span>url='https://www.wiwi.hu-berlin.de/de/studium/pa/noten')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scrapes url sources that list grading overviews from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>url</code></strong> :&ensp;<code>str</code></dt>
+<dd>URL listing the current grading overview of the HU WiWi Faculty. Defaults to "https://www.wiwi.hu-berlin.de/de/studium/pa/noten".</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>containing the semesters as keys and the corresponding URLs listing grading overview as values.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def list_sources(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;):  
+ &#34;&#34;&#34;Scrapes url sources that list grading overviews from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin.
+
+ Parameters
+ ----------
+ url : str
+     URL listing the current grading overview of the HU WiWi Faculty. Defaults to &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;.
+
+ Returns
+ -------
+ dict
+     containing the semesters as keys and the corresponding URLs listing grading overview as values. 
+ &#34;&#34;&#34;
+ soup = BeautifulSoup(requests.get(url).content, &#39;lxml&#39;)
+ latest = &#34;&#34;
+ if &#34;semester&#34; in str(soup.find(&#39;h4&#39;)):
+    semester = soup.find(&#39;h4&#39;).getText()
+ elif &#34;semester&#34; in str(soup.find(&#39;h3&#39;)):
+    semester = soup.find(&#39;h3&#39;).getText()
+ else:  
+    semester = &#34;current&#34;
+ urls = {semester: url} 
+ for i in soup.find_all(&#39;p&#39;):
+  if i.find(&#34;a&#34;) != None:
+    a = i.find(&#34;a&#34;)
+    link = a.attrs[&#39;href&#39;]
+    if &#34;resolveuid&#34; in link:
+      link = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/&#34; + link
+    if &#34;mailto&#34; in link:
+      continue
+    if &#34;AGNES&#34; in a.text:
+      continue
+    temp = {a.text: link} 
+    urls.update(temp)
+ return urls</code></pre>
+</details>
+</dd>
+<dt id="hu_wiwi_grades.hu_wiwi_grades.prepare_for_analysis"><code class="name flex">
+<span>def <span class="ident">prepare_for_analysis</span></span>(<span>df=Empty DataFrame
+Columns: []
+Index: [])</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Prepares the output of the get_grading() function for further analysis, such as visualisations, regressions or
+descriptive statistics. </p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>df</code></strong> :&ensp;<code>pd.DataFrame()</code></dt>
+<dd>Requires the DataFrame output of the get_grading() function.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pd.DataFrame </code></dt>
+<dd>
+<p>Dataframe containing an exam overview. Data columns are as follows:</p>
+<p>==================
+========================================================
+exam
+The exam name (as <code>str</code>)
+semester
+The corresponding semester of the publication (as <code>str</code>)
+round
+Exam round '01'/'02' as prior/after the break (as <code>str</code>)
+examiner
+Name of the examiner (as <code>str</code>)
+grade
+Grade of a single exam participant (as <code>int</code>)
+==================
+========================================================</p>
+</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def prepare_for_analysis(df = pd.DataFrame()):
+ &#34;&#34;&#34;Prepares the output of the get_grading() function for further analysis, such as visualisations, regressions or
+  descriptive statistics. 
+
+ Parameters
+ ----------
+ df : pd.DataFrame()
+     Requires the DataFrame output of the get_grading() function. 
+ 
+ Returns
+ -------
+ pd.DataFrame 
+      Dataframe containing an exam overview. Data columns are as follows:
+
+        ==================  ========================================================
+        exam                The exam name (as `str`)
+        semester            The corresponding semester of the publication (as `str`)
+        round               Exam round &#39;01&#39;/&#39;02&#39; as prior/after the break (as `str`)
+        examiner            Name of the examiner (as `str`)
+        grade               Grade of a single exam participant (as `int`)
+        ==================  ========================================================
+ &#34;&#34;&#34;   
+ df2 = pd.DataFrame()
+ for index, row in df.iterrows():
+  for grade in [&#39;1.0&#39;, &#39;1.3&#39;, &#39;1.7&#39;, &#39;2.0&#39;, &#39;2.3&#39;, &#39;2.7&#39;, &#39;3.0&#39;, &#39;3.3&#39;, &#39;3.7&#39;, &#39;4.0&#39;, &#39;5.0&#39;]:
+    if row[grade] is not None:
+      for i in range(0, int(float(row[grade]))):
+           exam = row.exam.replace(&#39;- 0&#39;,&#39; - 0&#39;).replace(&#39;-0&#39;,&#39;- 0&#39;).replace(&#34; / &#34;,&#34;/ &#34;)
+           exam_name = exam.split(&#39; - 0&#39;)[0].strip()
+           temp1 = pd.DataFrame({ &#39;exam&#39;: [exam_name],
+                                  &#39;semester&#39;: [row.semester.strip()],
+                                  &#39;round&#39; : [row[&#34;round&#34;]],
+                                  &#39;examiner&#39; : [row.examiner.strip()],
+                                  &#39;grade&#39; : float(grade)})
+           df2 = df2.append(temp1)
+ df2.reset_index(drop=True, inplace=True)
+ return df2</code></pre>
+</details>
+</dd>
+<dt id="hu_wiwi_grades.hu_wiwi_grades.scrape_all_overviews"><code class="name flex">
+<span>def <span class="ident">scrape_all_overviews</span></span>(<span>url='https://www.wiwi.hu-berlin.de/de/studium/pa/noten', exam='')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scrapes all available grading overviews from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and return the overviews or a subset based on the entered exam specification.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>url</code></strong> :&ensp;<code>str</code></dt>
+<dd>URL listing the current grading overview of the HU WiWi Faculty. Defaults to "https://www.wiwi.hu-berlin.de/de/studium/pa/noten".</dd>
+<dt><strong><code>exam</code></strong> :&ensp;<code>str</code></dt>
+<dd>Exam search filter by name. Defaults to "" (no search specification).</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pd.DataFrame </code></dt>
+<dd>
+<p>Dataframe containing an exam overview. Data columns are as follows:</p>
+<p>==================
+==============================================================
+exam
+The exam name (as <code>str</code>)
+date_published
+Date of the grading (as <code>str</code>)
+exam_review_details Review details (as <code>str</code>)
+semester
+Semester of the publication (as <code>str</code>)
+==================
+==============================================================</p>
+</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def scrape_all_overviews(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;, exam = &#34;&#34;): 
+ &#34;&#34;&#34;Scrapes all available grading overviews from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and return the overviews or a subset based on the entered exam specification.
+
+ Parameters
+ ----------
+ url : str
+     URL listing the current grading overview of the HU WiWi Faculty. Defaults to &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;.
+ exam : str
+     Exam search filter by name. Defaults to &#34;&#34; (no search specification).
+ 
+ Returns
+ -------
+ pd.DataFrame 
+      Dataframe containing an exam overview. Data columns are as follows:
+
+        ==================  ==============================================================
+        exam                The exam name (as `str`)
+        date_published      Date of the grading (as `str`)
+        exam_review_details Review details (as `str`)
+        semester            Semester of the publication (as `str`)
+        ==================  ==============================================================
+ &#34;&#34;&#34;
+ urls = list_sources()
+ df = pd.DataFrame(columns = [&#34;exam&#34;, &#34;url&#34;, &#34;date_published&#34;, &#34;exam_review_details&#34;, &#34;semester&#34;])
+ for keys,values in urls.items():
+   df = df.append(scrape_overview(url = values))
+ if exam != &#34;&#34;:
+    df = df[df[&#39;exam&#39;].str.contains(exam)]
+    
+ df = df[df[&#34;exam&#34;].apply(lambda x: len(x) &gt; 1)]
+ df.reset_index(drop=True, inplace=True)
+ return df</code></pre>
+</details>
+</dd>
+<dt id="hu_wiwi_grades.hu_wiwi_grades.scrape_overview"><code class="name flex">
+<span>def <span class="ident">scrape_overview</span></span>(<span>url='https://www.wiwi.hu-berlin.de/de/studium/pa/noten', exam='')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scrapes the latest grading overview from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and returns the overview or a subset based on the entered exam specification.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>url</code></strong> :&ensp;<code>str</code></dt>
+<dd>URL listing the current grading overview of the HU WiWi Faculty.
+Defaults to "https://www.wiwi.hu-berlin.de/de/studium/pa/noten".</dd>
+<dt><strong><code>exam</code></strong> :&ensp;<code>str</code></dt>
+<dd>Exam search filter by name.
+Defaults to "" (no search specification).</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pd.DataFrame </code></dt>
+<dd>
+<p>Dataframe containing an exam overview. Data columns are as follows:</p>
+<p>==================
+==============================================================
+exam
+The exam name (as <code>str</code>)
+date_published
+Date of the grading (as <code>str</code>)
+exam_review_details Details listing the review possibilities (as <code>str</code>)
+semester
+The corresponding semester of the publication (as <code>str</code>)
+==================
+==============================================================</p>
+</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def scrape_overview(url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;, exam = &#34;&#34;): 
+ &#34;&#34;&#34;Scrapes the latest grading overview from the Faculty of Economics and Business Administration of the Humboldt-Universität of Berlin and returns the overview or a subset based on the entered exam specification.
+
+ Parameters
+ ----------
+ url : str
+     URL listing the current grading overview of the HU WiWi Faculty.
+     Defaults to &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/noten&#34;.
+     
+ exam : str
+     Exam search filter by name. 
+     Defaults to &#34;&#34; (no search specification).
+ 
+ Returns
+ -------
+ pd.DataFrame 
+      Dataframe containing an exam overview. Data columns are as follows:
+
+        ==================  ==============================================================
+        exam                The exam name (as `str`)
+        date_published      Date of the grading (as `str`)
+        exam_review_details Details listing the review possibilities (as `str`)
+        semester            The corresponding semester of the publication (as `str`)
+        ==================  ==============================================================
+ &#34;&#34;&#34;
+ soup = BeautifulSoup(requests.get(url).content, &#39;lxml&#39;)
+ df = pd.DataFrame(columns = [&#34;exam&#34;, &#34;url&#34;, &#34;date_published&#34;, &#34;exam_review_details&#34;, &#34;semester&#34;])
+ for i in soup.find_all(&#39;tbody&#39;):
+    for y in i.find_all(&#34;tr&#34;):
+     if y.find(&#34;td&#34;) == 0:
+      continue
+     text = y.find_all(&#34;td&#34;)
+     if str(text) == &#34;[]&#34;:
+      continue
+     if &#34;strong&#34; in str(text[0]):
+      continue
+     if text[0].find(&#39;a&#39;) is None:
+       url = &#34;&#34; 
+     else:
+       url = text[0].find(&#39;a&#39;).attrs[&#39;href&#39;]
+       if &#34;resolveuid&#34; in str(url):
+        url = &#34;https://www.wiwi.hu-berlin.de/de/studium/pa/&#34; + url
+     if &#34;semester&#34; in str(soup.find(&#39;h4&#39;)):
+        semester = soup.find(&#39;h4&#39;).getText()
+     elif &#34;semester&#34; in str(soup.find(&#39;h3&#39;)):
+        semester = soup.find(&#39;h3&#39;).getText()
+     else:  
+        semester = &#34;unidentified&#34;
+     semester = semester.replace(&#34;Sommersemester&#34;, &#34;SoSe&#34;).replace(&#34;Wintersemester&#34;, &#34;WiSe&#34;)
+     df = df.append({&#34;exam&#34;: text[0].getText(), &#34;url&#34;: url,
+                     &#34;date_published&#34;: text[1].getText(),
+                     &#34;exam_review_details&#34;: text[2].getText(),
+                     &#34;semester&#34;: semester}, ignore_index=True)
+    
+ for col in [&#34;exam&#34;, &#34;url&#34;, &#34;date_published&#34;, &#34;exam_review_details&#34;]:
+    df[col] = df[col].str.replace(&#34;\n&#34;, &#34; &#34;)
+ df = df[df[&#34;exam&#34;].apply(lambda x: len(x) &gt; 1)]
+ if exam != &#34;&#34;:
+    df = df[df[&#39;exam&#39;].str.contains(exam)]
+ return df</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="hu_wiwi_grades" href="index.html">hu_wiwi_grades</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="hu_wiwi_grades.hu_wiwi_grades.get_grading" href="#hu_wiwi_grades.hu_wiwi_grades.get_grading">get_grading</a></code></li>
+<li><code><a title="hu_wiwi_grades.hu_wiwi_grades.list_sources" href="#hu_wiwi_grades.hu_wiwi_grades.list_sources">list_sources</a></code></li>
+<li><code><a title="hu_wiwi_grades.hu_wiwi_grades.prepare_for_analysis" href="#hu_wiwi_grades.hu_wiwi_grades.prepare_for_analysis">prepare_for_analysis</a></code></li>
+<li><code><a title="hu_wiwi_grades.hu_wiwi_grades.scrape_all_overviews" href="#hu_wiwi_grades.hu_wiwi_grades.scrape_all_overviews">scrape_all_overviews</a></code></li>
+<li><code><a title="hu_wiwi_grades.hu_wiwi_grades.scrape_overview" href="#hu_wiwi_grades.hu_wiwi_grades.scrape_overview">scrape_overview</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.1</a>.</p>
+</footer>
+</body>
+</html>
