@@ -70,12 +70,12 @@ df = hu.scrape_all_overviews(exam = "Finance")
 # Same as above, but instead of solely the latest overview all historical overviews are pulled. Typically, a few semesters are available.
 
 df = hu.get_grading(exam="", only_current_semester = True) 
-# Scrapes the grades from the urls listed in the overview pages of either only the latest semester (only_current_semester = True) or all (only_current_semester = False). 
+# Scrapes the grades from the URLs listed in the overview pages of either only the latest semester (only_current_semester = True) or all (only_current_semester = False). 
 # An exam filter may be specified as in the examples above or not.
 # Returns a dataframe listing the number of participants, the examiner and all grades as variables. 
 
 df2 = prepare_for_analysis(df) 
-# Prepares the dataframe output of the get_grading() function for further analysis, such as visualisations, descriptive statistics or regression analysis.
+# Prepares the dataframe output of get_grading() for further analysis, such as visualisations, descriptive statistics or regression analysis.
 ```
 
 ## License
