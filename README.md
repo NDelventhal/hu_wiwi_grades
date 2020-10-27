@@ -63,7 +63,7 @@ import hu_wiwi_grades as hu
 hu.list_sources() 
 # scrapes URL sources that list grading overviews and returns a dictionary containing the semesters as keys and the URLs as values. 
 
-df = hu.scrape_overview(exam = "Finance") 
+df = hu.scrape_overview(exam = "Economics") 
 # Scrapes the latest grading overview and returns the overview or a subset based on the entered exam specification.
 # In this example solely "Finance" exams are returned. The exam arguments defaults to "" (no filtering).  
 
