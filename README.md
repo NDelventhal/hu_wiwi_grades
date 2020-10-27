@@ -66,7 +66,7 @@ df = hu.scrape_overview(exam = "Finance")
 # Scrapes the latest grading overview and returns the overview or a subset based on the entered exam specification.
 # In this example solely "Finance" exams are returned. The exam arguments defaults to "" (no filtering).  
 
-df = hu.scrape_all_overviews(exam = "Finance") 
+df = hu.scrape_all_overviews(exam = "Valuation") 
 # Same as above, but instead of solely the latest overview all historical overviews are pulled. Typically, a few semesters are available.
 
 df = hu.get_grading(exam="", only_current_semester = True) 
@@ -74,7 +74,7 @@ df = hu.get_grading(exam="", only_current_semester = True)
 # An exam filter may be specified as in the examples above or not.
 # Returns a dataframe listing the number of participants, the examiner and all grades as variables. 
 
-df2 = prepare_for_analysis(df) 
+df2 = hu.prepare_for_analysis(df) 
 # Prepares the dataframe output of get_grading() for further analysis, such as visualisations, descriptive statistics or regression analysis.
 ```
 
