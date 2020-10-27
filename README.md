@@ -1,3 +1,5 @@
+
+
 <!-- TOC -->
 ## Table of Content
 - [hu_wiwi_grades](#hu_wiwi_grades) 
@@ -8,8 +10,7 @@
 - [License](#license)
 <!-- /TOC -->
 
-# hu_wiwi_grades
-
+## hu_wiwi_grades
 **hu_wiwi_grades** is a Python library for searching, viewing and scraping published students' grading of the Faculty of Economics and Business Administration of the Humboldt University of Berlin.
 
 Please note: The functionality maybe interrupted in case any changes in the publication occur or in case the website is not available.  
