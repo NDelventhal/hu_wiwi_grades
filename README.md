@@ -41,7 +41,7 @@ The following libraries are required:
 - pandas
 - numpy
 - requests 
-- bs4
+- beautifulsoup4
 
 These libraries can be installed via the package manager [pip](https://pip.pypa.io/en/stable/).
 
@@ -56,7 +56,7 @@ import pandas as pd
 import numpy as np
 import requests
 import tabula
-from bs4 import BeautifulSoup
+from beautifulsoup4 import BeautifulSoup
 
 import hu_wiwi_grades as hu
 
