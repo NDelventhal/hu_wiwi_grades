@@ -21,16 +21,14 @@ This library was primarily created for testing/training purposes, such as extrac
 
 ## Installation
 
-Available as soon as the package has been added to The Python Package Index (PyPI) (not supported yet!): 
-
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install hu_wiwi_grades
 
-```bash
+```python
 pip install hu_wiwi_grades
 ```
-or through the author's Github repository 
+Or install it through the author's Github repository 
 
-```bash
+```python
 pip install git+https://github.com/NDelventhal/hu_wiwi_grades
 ```
 
@@ -45,7 +43,7 @@ The following libraries are required:
 
 These libraries can be installed via the package manager [pip](https://pip.pypa.io/en/stable/).
 
-```bash
+```python
 pip install tabula numpy pandas requests bs4
 ```
 
@@ -80,3 +78,8 @@ Further usuage examples are listed [here](https://github.com/NDelventhal/hu_wiwi
 ## License
 
 This project is licensed under the [MIT License](https://github.com/NDelventhal/hu_wiwi_grades/blob/main/LICENSE).
+
+## Contact
+
+- The author: Niall Delventhal - ni.delventhal@gmail.com
+
