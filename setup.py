@@ -11,7 +11,8 @@ setuptools.setup(
     long_description=open('README.md').read(),
     download_url = 'https://github.com/NDelventhal/hu_wiwi_grades/archive/v_010.tar.gz',
     packages=setuptools.find_packages(),
-    'License :: MIT License',
+    'Intended Audience :: Researchers',
+    'License :: OSI Approved :: MIT License', 
     'Development Status :: 3 - Alpha', 
     install_requires=['tabula','pandas','numpy','requests','beautifulsoup4'],
     classifiers=[
