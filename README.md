@@ -44,7 +44,7 @@ The following libraries are required:
 These libraries can be installed via the package manager [pip](https://pip.pypa.io/en/stable/).
 
 ```python
-pip install tabula numpy pandas requests bs4
+pip install tabula numpy pandas requests beautifulsoup4
 ```
 
 ## Usage
