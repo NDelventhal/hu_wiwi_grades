@@ -52,11 +52,6 @@ pip install tabula numpy pandas requests bs4
 ## Usage
 
 ```python
-import pandas as pd
-import numpy as np
-import requests
-import tabula
-from beautifulsoup4 import BeautifulSoup
 
 import hu_wiwi_grades as hu
 
@@ -77,7 +72,10 @@ df = hu.get_grading(exam="", only_current_semester = True)
 
 df2 = hu.prepare_for_analysis(df) 
 # Prepares the dataframe output of get_grading() for further analysis, such as visualisations, descriptive statistics or regression analysis.
+
 ```
+
+Further usuage examples are listed [here](https://github.com/NDelventhal/hu_wiwi_grades/blob/main/documentation/usage_examples.ipynb)
 
 ## License
 
