@@ -58,7 +58,7 @@ hu.list_sources()
 
 df = hu.scrape_overview(exam = "Economics") 
 # Scrapes the latest grading overview and returns the overview or a subset based on the entered exam specification.
-# In this example solely "Finance" exams are returned. The exam arguments defaults to "" (no filtering).  
+# In this example solely Economics exams are returned. The exam arguments defaults to "" (no filtering).  
 
 df = hu.scrape_all_overviews(exam = "Valuation") 
 # Same as above, but instead of solely the latest overview all historical overviews are pulled. Typically, a few semesters are available.
